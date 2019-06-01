@@ -1,0 +1,6 @@
+questions:
+- variable: port
+  default: 7777
+  description: what port
+  label: which port
+  type: int

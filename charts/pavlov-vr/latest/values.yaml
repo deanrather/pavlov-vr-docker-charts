@@ -1,0 +1,31 @@
+image:
+  repository: deanrather/docker-pavlov-vr-server
+  tag: latest
+  pullPolicy: Always
+
+securityContext:
+  enabled: true
+  fsGroup: 1001
+  runAsUser: 1001
+
+clusterDomain: cluster.local
+service:
+  annotations: {}
+  type: ClusterIP
+  port: 7777
+
+resources: {}
+# limits:
+#   cpu: 500m
+#   memory: 512Mi
+# requests:
+#   cpu: 100m
+#   memory: 256Mi
+
+persistence:
+  enabled: true
+  accessModes:
+    - ReadWriteOnce
+  size: 8Gi
+  annotations: {}
+
